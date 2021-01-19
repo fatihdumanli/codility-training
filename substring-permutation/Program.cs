@@ -9,16 +9,7 @@ namespace substring_permutation
         {
             string shortString = "abbc"; //length of 3
             string longString = "cbabadcbbabbcbabaabccbabc"; //length of 14
-
-            /*
-            Permutaion (bba) is found in the range (3, 6)
-            Permutaion (bba) is found in the range (7, 10)
-            Permutaion (bba) is found in the range (8, 11)
-            Permutaion (bba) is found in the range (9, 12)
-            */
             permutation(longString, shortString);
-            
-            Console.WriteLine("Hello World!");
         }
 
         static void permutation(string longString, string shortString)
@@ -79,24 +70,15 @@ namespace substring_permutation
                    }
                }
 
-               if(!isMatch)
+                if(!isMatch)
                 {
-                    continue;
-                    
+                    continue;        
                 }
 
-               //SAFE ZONE. MEANS A MATCH.
-                var x = 2;
+                //That's a permutation.
                 Console.WriteLine($"Permutaion ({shortString}) is found in the range ({i}, {shortString.Length + i})");
 
             }
-
-
-
-
-
-
-
 
 
         }
